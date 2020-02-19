@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+@import url(all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 
 /*
@@ -2637,6 +2637,10 @@ input, select, textarea {
 		.image img {
 			display: block;
 			border-radius: 4px;
+		}
+
+		.imagebanner {
+			object-position: unset;
 		}
 
 		.image.left, .image.right {
