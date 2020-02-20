@@ -9,9 +9,7 @@ require("./util.js")
 require("./main.js")
 
 // Img
-require('./../../images/banner-large.webp')
-require('./../../images/banner-medium.webp')
-require('./../../images/banner-small.webp')
+require('./../../images/banner-large.jpg')
 
 // Fonts
 require("./../webfonts/fa-brands-400.eot")
