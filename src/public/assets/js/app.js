@@ -10,6 +10,7 @@ require("./main.js")
 
 // Img
 require('./../../images/banner-large.webp')
+require('./../../images/banner-medium.webp')
 require('./../../images/banner-small.webp')
 
 // Fonts
