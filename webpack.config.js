@@ -4,10 +4,11 @@ const PATHS = {
     src: path.join(__dirname, 'src')
 }
 
-const webpack = require("webpack");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 
 module.exports = {
@@ -24,7 +25,7 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader,'css-loader'],
             },
             {
-                test: /\.(png|webp|svg|jpg|gif)$/,
+                test: /\.(html|png|webp|svg|jpg|gif)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]',
@@ -53,12 +54,26 @@ module.exports = {
         },
     },
     plugins: [
+        new HtmlWebpackPlugin({}),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[name].css',
           }),
         new PurgecssPlugin({
             paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
+        }),
+        new HtmlCriticalWebpackPlugin({
+            base: path.resolve(__dirname, 'src/public/assets/dist/'),
+            src: '../../index.html',
+            dest: 'index.html',
+            inline: true,
+            minify: true,
+            width: 375,
+            height: 565,
+            ignore: ['@font-face',/url\(/],
+            penthouse: {
+              blockJSRequests: false,
+            }
         }),
     ],
     stats: 'errors-only'
