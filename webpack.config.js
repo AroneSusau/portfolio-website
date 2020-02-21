@@ -1,4 +1,14 @@
 const path = require('path');
+const glob = require('glob')
+const PATHS = {
+    src: path.join(__dirname, 'src')
+}
+
+const webpack = require("webpack");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserJSPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 
 module.exports = {
     entry: './src/public/assets/js/app.js',
@@ -6,13 +16,12 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'src/public/assets/dist/'),
-        publicPath: './assets/dist/'
     },
     module: {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                use: [MiniCssExtractPlugin.loader,'css-loader'],
             },
             {
                 test: /\.(png|webp|svg|jpg|gif)$/,
@@ -30,5 +39,27 @@ module.exports = {
             },
         ],
     },
+    optimization: {
+        minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+        splitChunks: {
+            cacheGroups: {
+              styles: {
+                name: 'styles',
+                test: /\.css$/,
+                chunks: 'all',
+                enforce: true,
+              },
+            },
+        },
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            chunkFilename: '[name].css',
+          }),
+        new PurgecssPlugin({
+            paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
+        }),
+    ],
     stats: 'errors-only'
 };
