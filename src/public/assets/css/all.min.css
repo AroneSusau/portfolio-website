@@ -35,7 +35,7 @@
      font-family: "Font Awesome 5 Brands";
      font-style: normal;
      font-weight: 400;
-     src: url(../webfonts/fa-brands-400.woff) format("woff");
+     src: url(https://s3-ap-southeast-2.amazonaws.com/aronesusau.com-assets/fonts/fa-brands-400.woff) format("woff");
  }
  
  @font-face {
@@ -43,5 +43,5 @@
      font-family: "Font Awesome 5 Free";
      font-style: normal;
      font-weight: 900;
-     src: url(../webfonts/fa-solid-900.woff) format("woff");
+     src: url(https://s3-ap-southeast-2.amazonaws.com/aronesusau.com-assets/fonts/fa-solid-900.woff) format("woff");
  }
