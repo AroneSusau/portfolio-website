@@ -10,6 +10,8 @@ require("./main.js")
 
 // Img
 require('./../../images/banner-large.jpg')
+require('./../../images/clients.jpg')
+require('./../../images/bestself.jpg')
 
 // Fonts
 require("./../webfonts/fa-brands-400.woff")
