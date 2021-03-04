@@ -1,44 +1,60 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0CTQM4FSZP"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0CTQM4FSZP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-			gtag('config', 'G-0CTQM4FSZP');
-		</script>
-		<title>Arone Susau</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="The personal portfolio of software engineer Arone Susau."/>
-		<!-- Styles -->
-		<link href="styles.css" rel="stylesheet">
-	</head>
-	<body class="is-preload">
+      gtag("config", "G-0CTQM4FSZP");
+    </script>
+    <title>Arone Susau</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The personal portfolio of software engineer Arone Susau."
+    />
+    <!-- Styles -->
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper" class="divided">
+      <!-- Banner -->
+      <section
+        class="banner style1 orient-left content-align-left fullscreen onload-image-fade-in onload-content-fade-right"
+      >
+        <div class="content">
+          <h1>Arone Susau</h1>
+          <p class="major">Melbourne - Software Engineer - Student</p>
+          <ul class="actions stacked">
+            <!-- <li>
+              <a href="#clients" class="button thin wide smooth-scroll-middle"
+                >Clients</a
+              >
+            </li> -->
+            <li>
+              <a href="#projects" class="button thin wide smooth-scroll-middle"
+                >Projects</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="image">
+          <img src="banner-large.jpg" alt="banner image" />
+        </div>
+      </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="divided">
-
-				<!-- Banner -->
-					<section class="banner style1 orient-left content-align-left fullscreen onload-image-fade-in onload-content-fade-right">
-						<div class="content">
-							<h1>Arone Susau</h1>
-							<p class="major">Melbourne - Software Engineer - Student</p>
-							<ul class="actions stacked">
-								<li><a href="#clients" class="button thin wide smooth-scroll-middle">Clients</a></li>
-								<li><a href="#projects" class="button thin wide smooth-scroll-middle">Projects</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="banner-large.jpg" alt="banner image" />
-						</div>
-					</section>
-
-					<!-- Clients -->
-					<section id="clients" class="spotlight style1 orient-right content-align-left image-position-left onscroll-image-fade-in">
+      <!-- Clients -->
+      <!-- <section id="clients" class="spotlight style1 orient-right content-align-left image-position-left onscroll-image-fade-in">
 						<div class="content">
 							<h2>Clients</h2>
 							<p>The following pieces of work are live websites, used by real customers, for real businesses.</p>
@@ -57,49 +73,94 @@
 						<div class="image">
 							<img src="bestself.jpg" alt="best self performance" />
 						</div>
-					</section>
+					</section> -->
 
-				<!-- Projects -->
-				<section id="projects" class="wrapper style1 align-center">
-					<div class="inner">
-						<h2>Projects</h2>
-						<p>A collection of all my personal projects and university assignments, which can also be found on <a href="https://github.com/AroneSusau">Github.</a></p>
-						<div class="items style3 medium onscroll-fade-in">
-							<section>
-								<a  aria-label="Pure Paradise v2 Repository" href="https://github.com/AroneSusau/pure-paradise-v2" class="icon solid style2 major fa-gamepad"><span class="label">Pure Paradise v2</span></a>
-								<h3>Pure Paradise v2 (WIP)</h3>
-								<p>A text based RPG game, written in Java then ported to TypeScript and deployed on Heroku.</p>
-								<a  aria-label="View Live Game" href="https://pure-paradise-v2.aronesusau.com">View Live Game (Beta)</a>
-							</section>
-							<section>
-								<a  aria-label="Discord Bot Repository" href="https://github.com/AroneSusau/discord-bot" class="icon solid style2 major fa-robot"><span class="label">Discord Bot</span></a>
-								<h3>Discord Bot</h3>
-								<p>A basic chat bot that interacts with users by responding to commands and key phrases.</p>
-							</section>
-							<section>
-								<a  aria-label="Zendesk Coding Challenge Repository" href="https://github.com/AroneSusau/zendesk-coding-challenge" class="icon solid style2 major fa-code"><span class="label">Zendesk Coding Challenge</span></a>
-								<h3>Zendesk Coding Challenge</h3>
-								<p>A CLI application to display Zendesk ticket data using their API.</p>
-							</section>
-						</div>
-					</div>
-				</section>
+      <!-- Projects -->
+      <section id="projects" class="wrapper style1 align-center">
+        <div class="inner">
+          <h2>Projects</h2>
+          <p>
+            A collection of all my personal projects and university assignments,
+            which can also be found on
+            <a href="https://github.com/AroneSusau">Github.</a>
+          </p>
+          <div class="items style3 medium onscroll-fade-in">
+            <section>
+              <a
+                aria-label="Pure Paradise v2 Repository"
+                href="https://github.com/AroneSusau/pure-paradise-v2"
+                class="icon solid style2 major fa-gamepad"
+                ><span class="label">Pure Paradise v2</span></a
+              >
+              <h3>Pure Paradise v2 (WIP)</h3>
+              <p>
+                A text based RPG game, written in Java then ported to TypeScript
+                and deployed on Heroku.
+              </p>
+              <a
+                aria-label="View Live Game"
+                href="https://pure-paradise-v2.aronesusau.com"
+                >View Live Game (Beta)</a
+              >
+            </section>
+            <section>
+              <a
+                aria-label="Discord Bot Repository"
+                href="https://github.com/AroneSusau/discord-bot"
+                class="icon solid style2 major fa-robot"
+                ><span class="label">Discord Bot</span></a
+              >
+              <h3>Discord Bot</h3>
+              <p>
+                A basic chat bot that interacts with users by responding to
+                commands and key phrases.
+              </p>
+            </section>
+            <section>
+              <a
+                aria-label="Zendesk Coding Challenge Repository"
+                href="https://github.com/AroneSusau/zendesk-coding-challenge"
+                class="icon solid style2 major fa-code"
+                ><span class="label">Zendesk Coding Challenge</span></a
+              >
+              <h3>Zendesk Coding Challenge</h3>
+              <p>
+                A CLI application to display Zendesk ticket data using their
+                API.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
 
-				<!-- Footer -->
-					<footer class="wrapper style1 align-center">
-						<div class="inner">
-							<ul class="icons">
-								<li><a aria-label="Github" href="https://www.github.com/AroneSusau" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
-								<li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/arone-susau" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<p>&copy; Arone Susau 2020</p>
-						</div>
-					</footer>
+      <!-- Footer -->
+      <footer class="wrapper style1 align-center">
+        <div class="inner">
+          <ul class="icons">
+            <li>
+              <a
+                aria-label="Github"
+                href="https://www.github.com/AroneSusau"
+                class="icon brands style2 fa-github"
+                ><span class="label">Github</span></a
+              >
+            </li>
+            <li>
+              <a
+                aria-label="LinkedIn"
+                href="https://www.linkedin.com/in/arone-susau"
+                class="icon brands style2 fa-linkedin-in"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+          </ul>
+          <p>&copy; Arone Susau 2020</p>
+        </div>
+      </footer>
+    </div>
 
-			</div>
-
-		<!-- Scripts -->
-			<script defer src="1.main.js"></script>
-			<script defer src="main.js"></script>
-	</body>
+    <!-- Scripts -->
+    <script defer src="1.main.js"></script>
+    <script defer src="main.js"></script>
+  </body>
 </html>
